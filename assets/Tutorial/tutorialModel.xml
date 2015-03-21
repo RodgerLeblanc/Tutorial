@@ -1,0 +1,15 @@
+<model>
+	<item page="0" image="asset:///Tutorial/Images/page1.png" description="This is the first screen. Swipe left or hit 'Next' button to go to the next tutorial screen." />
+	<item page="1" image="asset:///Tutorial/Images/page2.png" description="This Tutorial is an horizontal ListView. You can add/modify pages by changing values in tutorialModel.xml file." />
+	<item page="2" image="" description="If you do this right, you're going to be able to swipe between pages with your touch keyboard. This page shows a page with text and no image." />
+	<item page="3" image="asset:///Tutorial/Images/page4.png" description="This is how you write line breaks.
+	
+Writing \n won't do anything in this case.
+(Look in tutorialModel.xml to understand what this page means)
+
+See how text overlays the image, I've set opacity to 0.8, you can adjust it to whatever you want.
+
+Next page will show an image with no text." />
+	<item page="4" image="asset:///Tutorial/Images/page5.png" description="" />
+	<item page="5" image="asset:///Tutorial/Images/page6.png" description="See that Next button is now Done : That's called MAGIC! (Look TutorialSheet.qml Page TitleBar for more infos)" />
+</model>
