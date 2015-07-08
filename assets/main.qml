@@ -20,8 +20,8 @@ import "Tutorial"
 Page {
     id: mainPage
     
-    property int deviceHeight: 420
-    property int deviceWidth: 420
+    property int deviceHeight: 720
+    property int deviceWidth: 720
     
     attachedObjects: [
         TutorialSheet { id: tutorialSheet }
@@ -39,8 +39,6 @@ Page {
                 onLayoutFrameChanged: {
                     mainPage.deviceWidth = layoutFrame.width;
                     mainPage.deviceHeight = layoutFrame.height;
-                    
-                    console.log("Width: " + mainPage.deviceWidth + " height: " + mainPage.deviceHeight)
                 }
             }
         ]
