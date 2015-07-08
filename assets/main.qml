@@ -33,7 +33,14 @@ Page {
     }
     
     Container {
-        DeviceWidthAndHeightSelector {} // Get the deviceHeight and deviceWidth on startup
         Label { text: "HEY!!!" }
+        attachedObjects: [
+            LayoutUpdateHandler {
+                onLayoutFrameChanged: {
+                    mainPage.deviceWidth = layoutFrame.width;
+                    mainPage.deviceHeight = layoutFrame.height;
+                }
+            }
+        ]
     }
 }

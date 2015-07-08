@@ -36,11 +36,6 @@ simulator {
 
 config_pri_assets {
     OTHER_FILES += \
-        $$quote($$BASEDIR/assets/1440x1440/DeviceWidthAndHeightSelector.qml) \
-        $$quote($$BASEDIR/assets/720x1280/DeviceWidthAndHeightSelector.qml) \
-        $$quote($$BASEDIR/assets/720x720/DeviceWidthAndHeightSelector.qml) \
-        $$quote($$BASEDIR/assets/768x1280/DeviceWidthAndHeightSelector.qml) \
-        $$quote($$BASEDIR/assets/DeviceWidthAndHeightSelector.qml) \
         $$quote($$BASEDIR/assets/Tutorial/Images/page1.png) \
         $$quote($$BASEDIR/assets/Tutorial/Images/page2.png) \
         $$quote($$BASEDIR/assets/Tutorial/Images/page3.png) \
@@ -60,6 +55,8 @@ config_pri_source_group1 {
     HEADERS += $$quote($$BASEDIR/src/applicationui.hpp)
 }
 
+INCLUDEPATH += $$quote($$BASEDIR/src)
+
 CONFIG += precompile_header
 
 PRECOMPILED_HEADER = $$quote($$BASEDIR/precompiled.h)
@@ -74,18 +71,6 @@ lupdate_inclusion {
         $$quote($$BASEDIR/../assets/*.qml) \
         $$quote($$BASEDIR/../assets/*.js) \
         $$quote($$BASEDIR/../assets/*.qs) \
-        $$quote($$BASEDIR/../assets/1440x1440/*.qml) \
-        $$quote($$BASEDIR/../assets/1440x1440/*.js) \
-        $$quote($$BASEDIR/../assets/1440x1440/*.qs) \
-        $$quote($$BASEDIR/../assets/720x1280/*.qml) \
-        $$quote($$BASEDIR/../assets/720x1280/*.js) \
-        $$quote($$BASEDIR/../assets/720x1280/*.qs) \
-        $$quote($$BASEDIR/../assets/720x720/*.qml) \
-        $$quote($$BASEDIR/../assets/720x720/*.js) \
-        $$quote($$BASEDIR/../assets/720x720/*.qs) \
-        $$quote($$BASEDIR/../assets/768x1280/*.qml) \
-        $$quote($$BASEDIR/../assets/768x1280/*.js) \
-        $$quote($$BASEDIR/../assets/768x1280/*.qs) \
         $$quote($$BASEDIR/../assets/Tutorial/*.qml) \
         $$quote($$BASEDIR/../assets/Tutorial/*.js) \
         $$quote($$BASEDIR/../assets/Tutorial/*.qs) \
