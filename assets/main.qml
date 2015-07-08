@@ -20,8 +20,8 @@ import "Tutorial"
 Page {
     id: mainPage
     
-    property int deviceHeight: 720
-    property int deviceWidth: 720
+    property int deviceHeight: 420
+    property int deviceWidth: 420
     
     attachedObjects: [
         TutorialSheet { id: tutorialSheet }
@@ -33,7 +33,16 @@ Page {
     }
     
     Container {
-        DeviceWidthAndHeightSelector {} // Get the deviceHeight and deviceWidth on startup
         Label { text: "HEY!!!" }
+        attachedObjects: [
+            LayoutUpdateHandler {
+                onLayoutFrameChanged: {
+                    mainPage.deviceWidth = layoutFrame.width;
+                    mainPage.deviceHeight = layoutFrame.height;
+                    
+                    console.log("Width: " + mainPage.deviceWidth + " height: " + mainPage.deviceHeight)
+                }
+            }
+        ]
     }
 }
